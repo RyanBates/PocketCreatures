@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cbe58e042b7d64eba18d32c259655d, type: 3}
+  m_Name: Dragon Type
+  m_EditorClassIdentifier: 
+  LVL: 0
+  HP: 0
+  EXP: 0
+  Attack: 0
+  Speed: 0
+  Defence: 0
+  type: 5
+  gender: 0
+  inEffective: 0
+  notVeryEffective: 0
+  superEffective: 0
+  criticalHit: 0
+  wild: 0
