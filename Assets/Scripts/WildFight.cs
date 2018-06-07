@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class WildFight : MonoBehaviour
 {
+    public GameObject player;
+    Creature creature;
     private bool appear = false;
-    public float level;
+    private bool capture = false;
+    public int level = Random.Range(0,100);
     public float time;
 
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-            DecideGender();
-
-        GetType();
+        BeginBattle(time);
     }
 
     /// <summary>
@@ -23,12 +23,25 @@ public class WildFight : MonoBehaviour
     /// begin BeginBattle
     /// </summary>
     /// <param name="time"></param>
-    private void BeginBattle(float time)
+    private void BeginBattle(float t)
     {
+        var begin = new int();
 
+        if(gameObject.transform == player.transform)
+            begin += (int)Time.deltaTime;
 
+        if(begin >= t)
+        {
+            GetType();
+            GetGender();
+            creature.LVL = level;
+        }
     }
     
+    private void Battling()
+    {
+
+    }
 
     private void GetType()
     {
@@ -40,7 +53,7 @@ public class WildFight : MonoBehaviour
     }
 
 
-    void DecideGender()
+    void GetGender()
     {
         var getGender = new Gender();
         getGender = (Gender)Random.Range(0, 2);
